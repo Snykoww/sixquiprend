@@ -1,16 +1,17 @@
 package sixquiprend;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Jeu {
     private List<Joueur> joueurs;
     private List<Carte> pioche;
+    private List<Rangee> rangees;  // Added field for 'rangees'
 
     public Jeu() {
         this.joueurs = new ArrayList<>();
         this.pioche = new ArrayList<>();
+        this.rangees = new ArrayList<>();  // Initialize 'rangees'
     }
 
     public void ajouterJoueur(Joueur joueur) {
@@ -23,6 +24,10 @@ public class Jeu {
 
     public List<Joueur> getJoueurs() {
         return this.joueurs;
+    }
+
+    public List<Rangee> getRangees() {  // Added getter for 'rangees'
+        return this.rangees;
     }
 
     public void commencer() {

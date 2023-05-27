@@ -1,8 +1,8 @@
 package sixquiprend;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,8 +41,10 @@ public class Main {
         while (!pioche.isEmpty()) {
             // Chaque joueur choisit une carte
             for (Joueur joueur : jeu.getJoueurs()) {
-                Carte carteChoisie = joueur.choisirCarte();
-                jeu.jouerTour(carteChoisie);
+                if (!joueur.getMain().isEmpty()) {
+                    Carte carteChoisie = joueur.choisirCarte();
+                    jeu.jouerTour(carteChoisie);
+                }
             }
 
             // Vérifier si un joueur a atteint 66 têtes de boeuf

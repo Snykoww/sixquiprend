@@ -1,5 +1,3 @@
-
-
 package sixquiprend;
 
 import java.util.Random;
@@ -22,6 +20,6 @@ public class IA extends Joueur {
     public void choisirRangee(Jeu jeu) {
         // Choisir une rangée au hasard pour prendre les cartes
         int index = this.random.nextInt(jeu.getRangees().size());
-        this.ajouterCarteAuTas(jeu.getRangees().get(index).prendreCartes());
+        this.ajouterCartesAuTas(jeu.getRangees().get(index).prendreCartes());
     }
 }
